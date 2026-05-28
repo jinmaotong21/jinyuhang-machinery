@@ -1,0 +1,198 @@
+/* ============================================
+   语言选择器样式
+   ============================================ */
+
+.language-selector {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    z-index: 99;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.lang-btn {
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.lang-btn:hover {
+    background-color: var(--light-bg);
+    color: var(--secondary-color);
+}
+
+.lang-btn.active {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.lang-btn:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+/* 阿拉伯语 RTL 支持 */
+html[dir="rtl"] .language-selector {
+    right: auto;
+    left: 20px;
+}
+
+html[dir="rtl"] .lang-btn {
+    text-align: right;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .language-selector {
+        top: auto;
+        bottom: 80px;
+        right: 10px;
+        left: auto;
+        flex-direction: row;
+    }
+
+    .lang-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        border-bottom: none !important;
+        border-right: 1px solid #eee;
+    }
+
+    .lang-btn:last-child {
+        border-right: none;
+    }
+
+    html[dir="rtl"] .language-selector {
+        left: 10px;
+        right: auto;
+    }
+
+    html[dir="rtl"] .lang-btn {
+        border-right: none;
+        border-left: 1px solid #eee;
+    }
+
+    html[dir="rtl"] .lang-btn:last-child {
+        border-left: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        bottom: 60px;
+        right: 5px;
+    }
+
+    .lang-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* 导航栏支持 RTL */
+html[dir="rtl"] .navbar .container {
+    direction: rtl;
+}
+
+html[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hamburger {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* 产品卡片 RTL 支持 */
+html[dir="rtl"] .product-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .product-features li {
+    direction: rtl;
+}
+
+/* 联系表单 RTL 支持 */
+html[dir="rtl"] .contact-form {
+    direction: rtl;
+}
+
+html[dir="rtl"] .info-item {
+    direction: rtl;
+}
+
+/* 页脚 RTL 支持 */
+html[dir="rtl"] .footer {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .footer-links {
+    flex-direction: row-reverse;
+}
+
+/* 关于我们 RTL 支持 */
+html[dir="rtl"] .about-content {
+    direction: rtl;
+}
+
+html[dir="rtl"] .about-text {
+    text-align: right;
+}
+
+/* 面包屑 RTL 支持 */
+html[dir="rtl"] .breadcrumb {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .breadcrumb .container {
+    flex-direction: row-reverse;
+}
+
+/* 产品详情 RTL 支持 */
+html[dir="rtl"] .product-details-grid {
+    direction: rtl;
+}
+
+html[dir="rtl"] .product-info-section {
+    text-align: right;
+}
+
+html[dir="rtl"] .specs-table td:first-child {
+    text-align: right;
+}
+
+html[dir="rtl"] .modal-content {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .close {
+    right: auto;
+    left: 1rem;
+}
+
+html[dir="rtl"] .description-tabs {
+    direction: rtl;
+}
+
+/* 确保文本对齐正确 */
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] body {
+    text-align: right;
+}
