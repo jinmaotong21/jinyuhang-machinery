@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 山东金裕航机械有限公司</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="css/i18n.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 语言选择器 -->
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="es">Español</button>
+        <button class="lang-btn" data-lang="pt">Português</button>
+        <button class="lang-btn" data-lang="ar">العربية</button>
+        <button class="lang-btn" data-lang="ru">Русский</button>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>金裕航机械</h1>
+                <p>山东金裕航机械有限公司</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-i18n="nav_home">首页</a></li>
+                <li><a href="index.html#products" data-i18n="nav_products">产品</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="index.html#contact" data-i18n="nav_contact">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html" data-i18n="breadcrumb_home">首页</a>
+            <span>/</span>
+            <a href="index.html#products" data-i18n="breadcrumb_products">产品</a>
+            <span>/</span>
+            <span id="breadcrumb-product" data-i18n="breadcrumb_detail">产品详情</span>
+        </div>
+    </div>
+
+    <!-- 产品详情 -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-details-grid">
+                <!-- 产品图片 -->
+                <div class="product-image-section">
+                    <div class="product-image-main" id="main-image">
+                        <i class="fas fa-excavator"></i>
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail active" data-image="excavator">
+                            <i class="fas fa-excavator"></i>
+                        </div>
+                        <div class="thumbnail" data-image="excavator-2">
+                            <i class="fas fa-hammer-head"></i>
+                        </div>
+                        <div class="thumbnail" data-image="excavator-3">
+                            <i class="fas fa-gears"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品信息 -->
+                <div class="product-info-section">
+                    <h1 id="product-title">小型挖掘机</h1>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(128 条评价)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="price-label" data-i18n="price_label">产品价格:</span>
+                        <span class="price" id="product-price">￥280,000</span>
+                        <span class="price-unit" data-i18n="ref_price">(参考价格)</span>
+                    </div>
+
+                    <div class="product-stock">
+                        <span class="stock-label" data-i18n="stock_label">库存状态:</span>
+                        <span class="stock-status in-stock" data-i18n="in_stock">有货</span>
+                    </div>
+
+                    <!-- 产品规格 -->
+                    <div class="product-specs">
+                        <h3 data-i18n="specs_title">产品规格</h3>
+                        <table class="specs-table">
+                            <tr id="spec-1">
+                                <td>型号</td>
+                                <td>JYH-35</td>
+                            </tr>
+                            <tr id="spec-2">
+                                <td>工作重量</td>
+                                <td>3.5 吨</td>
+                            </tr>
+                            <tr id="spec-3">
+                                <td>斗容量</td>
+                                <td>0.15 m³</td>
+                            </tr>
+                            <tr id="spec-4">
+                                <td>最大挖掘深度</td>
+                                <td>2.4 米</td>
+                            </tr>
+                            <tr id="spec-5">
+                                <td>发动机功率</td>
+                                <td>21.5 kW</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- 行动按钮 -->
+                    <div class="product-actions">
+                        <button class="btn btn-primary" id="inquiry-btn" data-i18n="inquiry_btn">
+                            <i class="fas fa-paper-plane"></i> 立即询价
+                        </button>
+                        <button class="btn btn-secondary" id="contact-btn" data-i18n="contact_btn">
+                            <i class="fas fa-phone"></i> 联系销售
+                        </button>
+                    </div>
+
+                    <!-- 产品优势 -->
+                    <div class="product-advantages">
+                        <h3 data-i18n="advantages_product">产品优势</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 小巧灵活，适合狭小作业空间</li>
+                            <li><i class="fas fa-check"></i> 燃油经济，运行成本低</li>
+                            <li><i class="fas fa-check"></i> 维护简单，配件易获得</li>
+                            <li><i class="fas fa-check"></i> 操作舒适，疲劳度低</li>
+                            <li><i class="fas fa-check"></i> 品质可靠，保修期长</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细描述 -->
+    <section class="product-description">
+        <div class="container">
+            <h2 data-i18n="description_title">产品详细描述</h2>
+            
+            <div class="description-tabs">
+                <button class="tab-btn active" data-tab="overview" data-i18n="tab_overview">产品概述</button>
+                <button class="tab-btn" data-tab="features" data-i18n="tab_features">主要特点</button>
+                <button class="tab-btn" data-tab="applications" data-i18n="tab_applications">应用场景</button>
+                <button class="tab-btn" data-tab="warranty" data-i18n="tab_warranty">保修服务</button>
+            </div>
+
+            <div class="tab-content" id="overview" style="display: block;">
+                <h3 data-i18n="tab_overview">产品概述</h3>
+                <p>我们的小型挖掘机采用先进的液压技术和轻量化设计，是小型土建工程、园林绿化、市政建设等领域的理想选择。具有高效能、低能耗、易操作的特点，广泛应用于各类工程项目。</p>
+                <p>该产品经过严格的质量检测，采用原装进口配件，确保产品的可靠性和耐用性。我们提供完整的售后服务和技术支持，为您的工程项目提供有力保障。</p>
+            </div>
+
+            <div class="tab-content" id="features">
+                <h3 data-i18n="tab_features">主要特点</h3>
+                <ul class="feature-list">
+                    <li><strong>紧凑设计：</strong> 小身材，大能力，适合狭小工作环境</li>
+                    <li><strong>高效液压系统：</strong> 先进的液压技术，工作效率高</li>
+                    <li><strong>舒适驾驶室：</strong> 空调驾驶室，长时间作业无疲劳</li>
+                    <li><strong>易于维护：</strong> 模块化设计，维修保养方便快捷</li>
+                    <li><strong>环保动力：</strong> 低排放，符合环保要求</li>
+                    <li><strong>多功能配件：</strong> 支持多种工作装置，一机多用</li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="applications">
+                <h3 data-i18n="tab_applications">应用场景</h3>
+                <div class="applications-grid">
+                    <div class="app-item">
+                        <i class="fas fa-building"></i>
+                        <h4>建筑工程</h4>
+                        <p>地基挖掘、地下室开挖、管道铺设</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-tree"></i>
+                        <h4>园林绿化</h4>
+                        <p>树木种植、景观改造、土地平整</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-road"></i>
+                        <h4>市政建设</h4>
+                        <p>道路施工、排水管道、电力电缆铺设</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-industry"></i>
+                        <h4>采矿开采</h4>
+                        <p>矿山开挖、原料处理、堆积卸货</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="warranty">
+                <h3 data-i18n="tab_warranty">保修服务</h3>
+                <table class="warranty-table">
+                    <tr>
+                        <th>项目</th>
+                        <th>保修期限</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>整机保修</td>
+                        <td>12 个月/2000 小时</td>
+                        <td>先达者为准</td>
+                    </tr>
+                    <tr>
+                        <td>易损件保修</td>
+                        <td>6 个月/1000 小时</td>
+                        <td>含滤芯、液压油等</td>
+                    </tr>
+                    <tr>
+                        <td>发动机保修</td>
+                        <td>12 个月/2000 小时</td>
+                        <td>原厂配件保障</td>
+                    </tr>
+                    <tr>
+                        <td>技术支持</td>
+                        <td>终身</td>
+                        <td>24小时客服热线</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关产品 -->
+    <section class="related-products">
+        <div class="container">
+            <h2 data-i18n="related_products">相关产品</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 data-i18n="loader_name">滑移装载机</h3>
+                    <p data-i18n="loader_desc">多功能滑移装载机，灵活应对各种建筑工地需求</p>
+                    <a href="product-details.html?product=loader" class="product-link" data-i18n="detail_link">查看详情</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 data-i18n="container_name">折叠集装箱房</h3>
+                    <p data-i18n="container_desc">便携式折叠集装箱房，快速搭建临时建筑</p>
+                    <a href="product-details.html?product=container" class="product-link" data-i18n="detail_link">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_copyright">© 2024 山东金裕航机械有限公司. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html" data-i18n="nav_home">首页</a>
+                <a href="index.html#products" data-i18n="nav_products">产品</a>
+                <a href="index.html#about" data-i18n="nav_about">关于</a>
+                <a href="index.html#contact" data-i18n="nav_contact">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 询价模态框 -->
+    <div class="modal" id="inquiry-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-i18n="inquiry_form_title">产品询价</h2>
+            <form class="inquiry-form">
+                <input type="text" placeholder="您的姓名" data-i18n="inquiry_name" required>
+                <input type="email" placeholder="您的邮箱" data-i18n="inquiry_email" required>
+                <input type="tel" placeholder="您的电话" data-i18n="inquiry_phone" required>
+                <input type="text" placeholder="公司名称" data-i18n="inquiry_company" required>
+                <textarea placeholder="询价信息" data-i18n="inquiry_message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn" data-i18n="inquiry_submit">发送询价</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>
